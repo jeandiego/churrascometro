@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./public/favicon.png" type="image/png"/>
+  <title>Churrax | Ouvi churrasco?</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles/global.css">
+  <link rel="stylesheet" href="./styles/style.css">
+  <!-- <script src="./scripts/script.js"></script> -->
+
+</head>
+<body>
+  <header> 
+    <div class="nav-brand">
+      <a href="/public/logo.png"><img src="./public/logo.png" alt=""></a>
+    </div>
+  </header>
+
+  <div class="container">
+  <section>
+    <div class="info">
+      <img src="" alt="">
+      <h1>Eu ouvi Churrasco?</h1>
+      <h2>Você está organizando um churrasco mas não sabe nem por onde começar? 
+        Deixa eu te ajudar a calcular o que vamos precisar
+        para fazer esse churrasco ser TOP !!!
+      </h2>
+    </div>
+    <div id="calculatorContainer" class="show">
+      <!-- <span>Bora calcular nosso churrasco:</span> -->
+        <div class="input-area">
+          <Label>Quantos adultos são?</Label>
+          <input id="adults" name="adults" type="number" placeholder="Número de adultos">
+        </div>
+        <div class="input-area">
+          <Label>Quantas crianças?</Label>
+          <input id="kids" name="kids" type="number" placeholder="Número de crianças">
+        </div>
+        <div class="input-area">
+          <Label>Quantas horas de duração?</Label>
+          <input  id="time" name="time" type="number" placeholder="Estimativa em horas">
+        </div>
+
+      <div id="buttonWrapper">
+        <div onclick="calculate()" class="calculate-button">Calcular</div>
+      </div>
+    </div>
+    <div id="calculatorResults" class="hide">
+      <h4> Para seu churrasco ficar top, você precisará de: </h4>
+      <div id="totalResults">
+        <div id="resultWrapper">
+          <span class="result">50KG</span>
+          <span class="insume">de carne</span>
+        </div>
+        <div id="resultWrapper">
+          <span class="result">50KG</span>
+          <span class="insume">de carne</span>
+        </div>
+        <div id="resultWrapper">
+          <span class="result">50KG</span>
+          <span class="insume">de carne</span>
+        </div>
+      </div>
+      <div id="buttonWrapper">
+        <div onclick="reCalculate()" class="reset-button">Recalcular</div>
+      </div>
+
+    </div>
+    
+  </section>
+</div>
+    <footer>
+      <span>Desenvolvido por Jean Diego </span>
+          <a href="https://github.com/jeandiego">Github</a>
+          | <a href="https://www.linkedin.com/in/jeandiegods/">Linkedin</a>
+    </footer>
+    <script src="./scripts/script.js"></script>
+</body>
+</html>
