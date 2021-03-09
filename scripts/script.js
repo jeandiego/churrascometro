@@ -18,8 +18,6 @@ let beer = document.getElementById("result-beer");
 let drinks = document.getElementById("result-drinks");
 let coal = document.getElementById("result-coal");
 
-// let coalUsage = 1.2;
-
 function calculate() {
   console.log("Calculando...")
 
@@ -30,7 +28,7 @@ function calculate() {
   let totalMeat = meatPerPerson(time) * adults + (meatPerPerson(time) / 2 * kids);
   let totalBeer = beerPerPerson(time) * adults;
   let totalDrink = drinkPerPerson(time) * adults + (drinkPerPerson(time) / 2 * kids);
-  let totalCoal = (totalMeat * 5) / 6;
+  let totalCoal = Math.ceil((totalMeat * 5000) / 6000);
   
   inputFields.classList.replace("show", "hide");
   results.classList.replace("hide","show");
@@ -38,7 +36,7 @@ function calculate() {
   meat.innerHTML = `${Math.ceil(totalMeat / 1000 )} kg`;
   beer.innerHTML = `${Math.ceil(totalBeer / 350)} latas`;
   drinks.innerHTML = `${Math.ceil(totalDrink / 1000)} litros`;
-  coal.innerHTML = `${Math.ceil(totalCoal / 5000)} sacos`;
+  coal.innerHTML = `${Math.ceil(totalCoal / 5000)} ${(totalCoal / 5000) > 1 ? "sacos" : "saco"}`;
 }
 
 function meatPerPerson(time) {
@@ -77,4 +75,9 @@ function cleanValue() {
   inputAdults.value = "";
   inputKids.value = "";
   inputTime.value = "";
+}
+
+function suggestion(meat, beer, drinks) {
+  var popup = document.getElementById("suggestion");
+  popup.classList.toggle("show");
 }
