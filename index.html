@@ -33,15 +33,15 @@
       <!-- <span>Bora calcular nosso churrasco:</span> -->
         <div class="input-area">
           <Label>Quantos adultos são?</Label>
-          <input id="adults" name="adults" type="number" placeholder="Número de adultos">
+          <input id="adults" oninput="this.value = Math.abs(this.value)" name="adults" type="number" placeholder="Número de adultos">
         </div>
         <div class="input-area">
           <Label>Quantas crianças?</Label>
-          <input id="kids" name="kids" type="number" placeholder="Número de crianças">
+          <input id="kids" oninput="this.value = Math.abs(this.value)" name="kids" type="number" placeholder="Número de crianças">
         </div>
         <div class="input-area">
           <Label>Quantas horas de duração?</Label>
-          <input  id="time" name="time" type="number" placeholder="Estimativa em horas">
+          <input  id="time" oninput="this.value = Math.abs(this.value)" name="time" type="number" placeholder="Estimativa em horas">
         </div>
 
       <div id="buttonWrapper">
