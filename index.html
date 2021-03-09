@@ -45,6 +45,7 @@
         </div>
 
       <div id="buttonWrapper">
+        <div onclick="cleanValue()" class="reset-button">Limpar</div>
         <div onclick="calculate()" class="calculate-button">Calcular</div>
       </div>
     </div>
@@ -52,19 +53,27 @@
       <h4> Para seu churrasco ficar top, você precisará de: </h4>
       <div id="totalResults">
         <div id="resultWrapper">
-          <span class="result">50KG</span>
-          <span class="insume">de carne</span>
+          <span id="result-meat"></span>
+          <span class="item"> Carnes </span>
+          <a class="insume" href="">Ver sugestões </a>
         </div>
         <div id="resultWrapper">
-          <span class="result">50KG</span>
-          <span class="insume">de carne</span>
+          <span id="result-beer"></span>
+          <span class="item"> Cervejas </span>
+          <a class="insume" href="">Ver sugestões</a>
         </div>
         <div id="resultWrapper">
-          <span class="result">50KG</span>
-          <span class="insume">de carne</span>
+          <span id="result-drinks"></span>
+          <span class="item"> Bebidas </span>
+          <a class="insume" href="">Ver sugestões</a>
+        </div>
+        <div id="resultWrapper">
+          <span id="result-coal"></span>
+          <span class="item"> Carvão</span>
+          <span class="insume"></span>
         </div>
       </div>
-      <div id="buttonWrapper">
+      <div>
         <div onclick="reCalculate()" class="reset-button">Recalcular</div>
       </div>
 

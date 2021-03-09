@@ -128,11 +128,11 @@ input::-webkit-inner-spin-button {
   cursor: pointer;
   height: 3rem;
   display: flex;
-  flex:1;
+  flex:2;
   align-items: center;
   justify-content: center;
 
-  margin: 1rem 0;
+  margin: 1rem 0 0 1rem;
   border: 0;
   outline: none;
   border-radius: 5px;
@@ -199,21 +199,49 @@ h4 {
 #resultWrapper{
   display:flex;
   flex: 1;
-  margin: 2rem 0;
+  padding: 1rem 0;
+  margin: 0.5rem 0;
   flex-direction:column;
   align-items: center;
   justify-content: center;
+  /* background: blue; */
+  border-left: 6px solid var(--orange);
+  background: rgba(0,0,0, 0.15);
+  border-radius: 2px;
 }
 
 #calculatorResults div {
   flex-direction: row;
 }
 
-#calculatorResults div span:first-child {
-  margin-right: 0.5rem;
+  .item {
+  text-align: center;
+  margin-left: 1rem;
+  flex: 1;
+  }
+
+  #result-meat, #result-beer, #result-drinks, #result-coal {
+  text-align: right;
   color: var(--text-highlight);
+  flex: 1;
+  }
+
+
+.insume {
+  text-align: left;
+  font-size: 0.75rem;
+  color: var(--title);
+  opacity: 0.3;
+  margin-left: 1rem;
+  flex: 1;
+
+  transition: opacity .2s;
 }
 
+.insume:hover {
+  color: var(--orange);
+  opacity: 1;
+}
 
 footer {
   width: 100vw;
