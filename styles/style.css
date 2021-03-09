@@ -239,6 +239,7 @@ h4 {
 }
 
 .insume:hover {
+  cursor: pointer;
   color: var(--orange);
   opacity: 1;
 }
