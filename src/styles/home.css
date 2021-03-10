@@ -1,0 +1,279 @@
+.container {
+  height: 95vh;
+  max-width: 992px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.container section {
+  flex:1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6.25rem;
+  align-content: center;
+}
+
+header {
+  width: 100vw;
+  background: var(--back-medium);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+
+.nav-brand img{
+  width: 16rem;
+  margin: 0.25rem;
+}
+
+section h1 {
+  color: var(--text-highlight);
+
+  font: 800 1rem "Rajdhani", sans-serif;
+  font-size: 5.6rem;
+  line-height: 0.9;
+
+  margin-bottom: 24px;
+}
+
+section h2 {
+  font: 400 1rem "Rajdhani", sans-serif;
+  font-size: 1.2rem;
+}
+
+.info{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#calculatorContainer {
+  height: 100%;
+
+  padding: 2rem;
+  
+  background: var(--back-medium);
+  border-radius: 12px;
+
+  text-align: center;
+}
+
+.input-area {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:center;
+}
+
+.input-area label {
+  color: var(--text-highlight);
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  margin: .5rem 0;
+}
+
+#calculatorContainer span {
+  font: 600 1rem "Inter", sans-serif;
+  color: var(--orange);
+  padding: 1rem;
+}
+
+#calculatorContainer input{
+  width: 100%;
+  height: 52px;
+  margin-bottom: .5rem;
+  background: var(--background);
+  
+  font: 400 1rem "Inter", sans-serif;
+  font-size: 1.25rem;
+  
+  border: 1px solid var(--gray-line);
+  border-radius: 6px;
+  
+  color: var(--orange);
+  padding-left: .8rem;
+
+  text-align: center;
+  
+}
+
+#calculatorContainer input::placeholder{
+  opacity: 0.4;
+  font-size: 1rem;
+}
+
+#calculatorContainer input:focus{
+  outline-color: var(--text-highlight);
+}
+
+#calculatorContainer
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+#buttonWrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.calculate-button {
+  cursor: pointer;
+  height: 3rem;
+  display: flex;
+  flex:2;
+  align-items: center;
+  justify-content: center;
+
+  margin: 1rem 0 0 1rem;
+  border: 0;
+  outline: none;
+  border-radius: 5px;
+
+  background: var(--orange);
+  color: var(--back-medium);
+
+  font-size: 1rem;
+  font-weight: 600;
+
+  transition: filter .2s;
+}
+
+.calculate-button:hover {
+  filter: brightness(0.8);
+}
+
+.reset-button {
+  cursor: pointer;
+  height: 3rem;
+  display: flex;
+  flex:1;
+  align-items: center;
+  justify-content: center;
+
+  margin: 1rem 0;
+  border: 0;
+  outline: none;
+  border-radius: 5px;
+
+  color: var(--back-medium);
+  background: var(--red);
+
+  font-size: 1rem;
+  font-weight: 600;
+
+  transition: filter .2s;
+}
+
+.reset-button:hover {
+  filter: brightness(0.8);
+}
+
+
+#calculatorResults {
+  height: 100%;
+  padding: 2rem;
+  background: var(--back-medium);
+  border-radius: 12px;
+  text-align: center;
+  color: var(--title);
+}
+
+h4 {
+  color: var(--orange);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+
+  font-size: 1.2rem;
+}
+
+#resultWrapper{
+  display:flex;
+  flex: 1;
+  padding: 1rem 0;
+  margin: 0.5rem 0;
+  flex-direction:column;
+  align-items: center;
+  justify-content: center;
+  /* background: blue; */
+  border-left: 6px solid var(--orange);
+  background: rgba(0,0,0, 0.15);
+  border-radius: 2px;
+}
+
+#calculatorResults div {
+  flex-direction: row;
+}
+
+  .item {
+  text-align: center;
+  margin-left: 1rem;
+  flex: 1;
+  }
+
+  #result-meat, #result-beer, #result-drinks, #result-coal {
+  text-align: right;
+  color: var(--text-highlight);
+  flex: 1;
+  }
+
+
+.insume {
+  text-align: left;
+  font-size: 0.75rem;
+  color: var(--title);
+  opacity: 0.3;
+  margin-left: 1rem;
+  flex: 1;
+
+  transition: opacity .2s;
+}
+
+.insume:hover {
+  cursor: pointer;
+  color: var(--orange);
+  opacity: 1;
+}
+
+footer {
+  width: 100vw;
+  height: 5vh;
+  display: flex;
+  background: var(--back-medium);
+  justify-content: center;
+  align-items: center;
+  /* position: absolute; */
+
+  font: 400 1rem "Rajdhani", sans-serif;
+}
+
+footer span{
+  margin-right: 2rem;
+}
+
+footer a{
+  color: var(--text-highlight);
+  padding: 0 .5rem;
+  transition: color .2s
+}
+
+footer a:hover{
+  color: var(--orange);
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
