@@ -77,7 +77,3 @@ function cleanValue() {
   inputTime.value = "";
 }
 
-function suggestion(meat, beer, drinks) {
-  var popup = document.getElementById("suggestion");
-  popup.classList.toggle("show");
-}
